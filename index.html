@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Weather app</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <img src="./assets/images/logo.svg" alt="logo" />
+
+      <div class="unit-selector">
+        <!-- Toggle Button -->
+        <button class="unit-btn" id="unitBtn">
+          <img src="./assets/images/icon-units.svg" alt="unit-icon" />
+          <span>Units</span>
+          <img src="./assets/images/icon-dropdown.svg" alt="Dropdown" />
+        </button>
+
+        <!-- Dropdown Menu -->
+        <div class="unit-dropdown" id="unitDropdown">
+          <!-- Switch Button -->
+          <button class="switch-btn">Switch to Imperial</button>
+
+          <!-- Temperature -->
+          <div class="unit-section">
+            <h3>Temperature</h3>
+
+            <label class="option">
+              <input type="radio" name="temperature" value="celsius" checked />
+              <span>Celsius (°C)</span>
+            </label>
+
+            <label class="option">
+              <input type="radio" name="temperature" value="fahrenheit" />
+              <span>Fahrenheit (°F)</span>
+            </label>
+          </div>
+
+          <!-- Wind Speed -->
+          <div class="unit-section">
+            <h3>Wind Speed</h3>
+
+            <label class="option">
+              <input type="radio" name="windSpeed" value="kmh" checked />
+              <span>km/h</span>
+            </label>
+
+            <label class="option">
+              <input type="radio" name="windSpeed" value="mph" />
+              <span>mph</span>
+            </label>
+          </div>
+
+          <!-- Precipitation -->
+          <div class="unit-section">
+            <h3>Precipitation</h3>
+
+            <label class="option">
+              <input type="radio" name="precipitation" value="mm" checked />
+              <span>Millimeters (mm)</span>
+            </label>
+
+            <label class="option">
+              <input type="radio" name="precipitation" value="in" />
+              <span>Inches (in)</span>
+            </label>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script src="app.js"></script>
+  </body>
+</html>
