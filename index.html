@@ -18,67 +18,35 @@
   <body>
     <header class="header">
       <img src="./assets/images/logo.svg" alt="logo" />
+      <button class="switch-btn">
+        <img src="./assets/images/icon-units.svg" alt="" />
+        <span>Switch to Imperial</span>
+        <img src="./assets/images/icon-dropdown.svg" alt="" />
+      </button>
+    </header>
+    <main>
+      <h1 class="heading-line">How's the sky looking today?</h1>
 
-      <div class="unit-selector">
-        <!-- Toggle Button -->
-        <button class="unit-btn" id="unitBtn">
-          <img src="./assets/images/icon-units.svg" alt="unit-icon" />
-          <span>Units</span>
-          <img src="./assets/images/icon-dropdown.svg" alt="Dropdown" />
-        </button>
-
-        <!-- Dropdown Menu -->
-        <div class="unit-dropdown" id="unitDropdown">
-          <!-- Switch Button -->
-          <button class="switch-btn">Switch to Imperial</button>
-
-          <!-- Temperature -->
-          <div class="unit-section">
-            <h3>Temperature</h3>
-
-            <label class="option">
-              <input type="radio" name="temperature" value="celsius" checked />
-              <span>Celsius (°C)</span>
-            </label>
-
-            <label class="option">
-              <input type="radio" name="temperature" value="fahrenheit" />
-              <span>Fahrenheit (°F)</span>
-            </label>
+      <div class="search-btn">
+        <div class="search-btn-inside">
+          <div class="search-btn-input">
+            <img src="./assets/images/icon-search.svg" alt="Search" />
+            <input type="text" placeholder="Search for a place... " />
           </div>
-
-          <!-- Wind Speed -->
-          <div class="unit-section">
-            <h3>Wind Speed</h3>
-
-            <label class="option">
-              <input type="radio" name="windSpeed" value="kmh" checked />
-              <span>km/h</span>
-            </label>
-
-            <label class="option">
-              <input type="radio" name="windSpeed" value="mph" />
-              <span>mph</span>
-            </label>
-          </div>
-
-          <!-- Precipitation -->
-          <div class="unit-section">
-            <h3>Precipitation</h3>
-
-            <label class="option">
-              <input type="radio" name="precipitation" value="mm" checked />
-              <span>Millimeters (mm)</span>
-            </label>
-
-            <label class="option">
-              <input type="radio" name="precipitation" value="in" />
-              <span>Inches (in)</span>
-            </label>
-          </div>
+          <button>Search</button>
         </div>
       </div>
-    </header>
-    <script src="app.js"></script>
+
+      <section class="main-container">
+        <div class="left" style="background-color: red">
+          <div class="left-container">
+            <div class="left-items"></div>
+            <div class="left-items"></div>
+          </div>
+        </div>
+        <div class="right" style="background-color: pink"></div>
+      </section>
+    </main>
+    <script src="app.js" type="module"></script>
   </body>
 </html>
