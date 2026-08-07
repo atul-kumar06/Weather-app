@@ -12,63 +12,23 @@
 </head>
 
 <body>
-  <!-- This is my header -->
-
-  <header class="header">
+  <header class="navBar">
     <img src="./assets/images/logo.svg" alt="logo" />
     <button class="switch-btn">
       <img src="./assets/images/icon-units.svg" alt="" />
-      <span>Switch to Imperial</span>
+      <span>Units</span>
       <img src="./assets/images/icon-dropdown.svg" alt="" />
     </button>
   </header>
-
-  <!-- This is my main section -->
-  <main>
-    <!-- Main Heading -->
-
-    <h1 class="heading-line">How's the sky looking today?</h1>
-
-    <div class="search-btn">
-      <div class="search-btn-inside">
-        <div class="search-btn-input">
-          <img src="./assets/images/icon-search.svg" alt="Search" />
-          <input type="text" placeholder="Search for a place... " />
-        </div>
-        <button>Search</button>
-      </div>
+  <h1 class="heading-line">How's the sky looking today?</h1>
+  <section class="search-container">
+    <div class="search-bar">
+      <img src="./assets/images/icon-search.svg" alt="">
+      <input type="text" placeholder="Search for a place">
     </div>
+    <button>Search</button>
+  </section>
 
-    <!-- Search Bar -->
-
-    <section class="main-container">
-      <div class="item1" style="background-color: palegreen">
-        <div class="sub-item1">
-          <img src="./assets/images/bg-today-large.svg" alt="" />
-          <div class="sub-item-child1">
-            <div>
-              <div>
-                <span>Berlin,</span>
-                <span>Gemany</span>
-              </div>
-              <div>
-                <span>Tuesday</span>
-                <span>Aug 5</span>
-                <span>2025</span>
-              </div>
-            </div>
-
-            <div>
-              20 <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="sub-item2"></div>
-        <div class="sub-item3"></div>
-      </div>
-      <div class="item2" style="background-color: brown"></div>
-    </section>
-  </main>
   <script src="app.js" type="module"></script>
 </body>
 
