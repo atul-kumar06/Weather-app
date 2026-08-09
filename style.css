@@ -113,12 +113,8 @@ body {
 .weather-dashboard {
   display: grid;
   grid-template-columns: 2fr 1fr;
-  height: 450px;
+  gap: 10px;
 
-}
-.right-dashboard{
-
-  padding: 10px;
 }
 .weather-info {
   /* 1. Use cover shorthand to keep image dynamically fitted to the box shape */
@@ -134,7 +130,7 @@ body {
   box-sizing: border-box;    /* Prevents padding from breaking layout calculations */     /* Keeps background mask neatly clipped */
   font-family: "DM Sans", sans-serif;
   height: 200px;
-  margin: 10px 0px;
+  margin-bottom: 10px;
 }
 .country-name {
   font-size: large;
@@ -182,4 +178,33 @@ body {
 .forcast-heading{
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 10px 0px;
+}
+
+.forcast-info-card{
+  background: var(--neutral-600-background-3);
+  height: 100px;
+  width: 110px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10px 0px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+.forcast-info-card-img{
+  height: 30px;
+  width: 30px;
+}
+.forcast-info-card-value{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.daily-forcast-info-card{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
