@@ -12,6 +12,7 @@
 </head>
 
 <body>
+
   <header class="navBar">
     <img src="./assets/images/logo.svg" alt="logo" />
     <button class="switch-btn">
@@ -20,7 +21,9 @@
       <img src="./assets/images/icon-dropdown.svg" alt="" />
     </button>
   </header>
+
   <h1 class="heading-line">How's the sky looking today?</h1>
+
   <section class="search-container">
     <div class="search-bar">
       <img src="./assets/images/icon-search.svg" alt="">
@@ -180,7 +183,94 @@
     </div>
 
 
-    <div class="left-dashboard"></div>
+    <div class="left-dashboard">
+
+      <div class="hourly-forecast-header">
+        <h3 class="forecast-title">Hourly forecast</h3>
+
+        <!-- Custom Select Dropdown -->
+        <div class="custom-select" id="daySelect">
+          <button class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
+            <span class="selected-value">Tuesday</span>
+            <svg class="select-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
+              fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 12 15 18 9"></polyline>
+            </svg>
+          </button>
+
+          <!-- Custom Floating Options Menu -->
+          <ul class="select-options" role="listbox" aria-label="Select day">
+            <li class="option" data-value="Monday" role="option">Monday</li>
+            <li class="option selected" data-value="Tuesday" role="option" aria-selected="true">Tuesday</li>
+            <li class="option" data-value="Wednesday" role="option">Wednesday</li>
+            <li class="option" data-value="Thursday" role="option">Thursday</li>
+            <li class="option" data-value="Friday" role="option">Friday</li>
+            <li class="option" data-value="Saturday" role="option">Saturday</li>
+            <li class="option" data-value="Sunday" role="option">Sunday</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="forecast-liveValue">
+        <div class="forecast-values">
+          <div class="forecast-values-frame">
+            <img src="./assets/images/icon-rain.webp" alt="">
+            <span>3</span>
+            <span>PM</span>
+          </div>
+          <div>
+            <span>20</span>
+            <span>&deg;</span>
+          </div>
+        </div>
+        <div class="forecast-values">
+          <div class="forecast-values-frame">
+            <img src="./assets/images/icon-rain.webp" alt="">
+            <span>3</span>
+            <span>PM</span>
+          </div>
+          <div>
+            <span>20</span>
+            <span>&deg;</span>
+          </div>
+        </div>
+        <div class="forecast-values">
+          <div class="forecast-values-frame">
+            <img src="./assets/images/icon-rain.webp" alt="">
+            <span>3</span>
+            <span>PM</span>
+          </div>
+          <div>
+            <span>20</span>
+            <span>&deg;</span>
+          </div>
+        </div>
+        <div class="forecast-values">
+          <div class="forecast-values-frame">
+            <img src="./assets/images/icon-rain.webp" alt="">
+            <span>3</span>
+            <span>PM</span>
+          </div>
+          <div>
+            <span>20</span>
+            <span>&deg;</span>
+          </div>
+        </div>
+        <div class="forecast-values">
+          <div class="forecast-values-frame">
+            <img src="./assets/images/icon-rain.webp" alt="">
+            <span>3</span>
+            <span>PM</span>
+          </div>
+          <div>
+            <span>20</span>
+            <span>&deg;</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    </div>
   </section>
 
   <script src="app.js" type="module"></script>

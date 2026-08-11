@@ -7,7 +7,7 @@
   --neutral-900-main-background: hsl(243, 96%, 9%);
   --neutral-800-background: hsl(243, 27%, 20%);
   --neutral-700-background-2: hsl(243, 23%, 24%);
-  --neutral-600-background-3: hsl(243, 23%, 30%);
+  --neutral-600-background-3: #222238;
   --neutral-300-background-4: hsl(240, 6%, 70%);
   --neutral-200-text-colour: hsl(250, 6%, 84%);
   --neutral-0-text-colour-2: hsl(0, 0%, 100%);
@@ -32,7 +32,7 @@
 
 body {
   background-color: var(--neutral-900-main-background);
-  padding: 30px 120px;
+  padding: 30px 50px;
   height: 100svh;
   color: var(--neutral-0-text-colour-2);
 }
@@ -114,11 +114,10 @@ body {
   display: grid;
   grid-template-columns: 2fr 1fr;
   gap: 10px;
-
 }
 .weather-info {
   /* 1. Use cover shorthand to keep image dynamically fitted to the box shape */
-  background: url('./assets/images/bg-today-large.svg') center / cover no-repeat;
+  background: url("./assets/images/bg-today-large.svg") center / cover no-repeat;
 
   /* 2. Force the element to stretch full height & width of the parent column */
   width: 100%;
@@ -126,8 +125,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 24px;             /* Keeps the interior elements from bleeding past corners */
-  box-sizing: border-box;    /* Prevents padding from breaking layout calculations */     /* Keeps background mask neatly clipped */
+  padding: 24px; /* Keeps the interior elements from bleeding past corners */
+  box-sizing: border-box; /* Prevents padding from breaking layout calculations */ /* Keeps background mask neatly clipped */
   font-family: "DM Sans", sans-serif;
   height: 200px;
   margin-bottom: 10px;
@@ -137,26 +136,25 @@ body {
   font-weight: bold;
   margin: 5px 0px;
 }
-.country-temp img{
+.country-temp img {
   width: 70px;
   height: 70px;
 }
-.country-temp{
+.country-temp {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 20px;
 }
-.country-temp-value{
+.country-temp-value {
   font-size: 80px;
 }
-.weather-card-container{
+.weather-card-container {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
   gap: 10px;
-
 }
-.weather-card{
+.weather-card {
   height: 100px;
   background: var(--neutral-600-background-3);
   padding: 10px;
@@ -165,22 +163,20 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-
 }
-.weather-temp{
+.weather-temp {
   font-size: 30px;
 }
 
-
-.left-dashboard{
+.left-dashboard {
   background-color: aquamarine;
 }
-.forcast-heading{
+.forcast-heading {
   font-family: "Bricolage Grotesque", sans-serif;
   margin: 10px 0px;
 }
 
-.forcast-info-card{
+.forcast-info-card {
   background: var(--neutral-600-background-3);
   height: 100px;
   width: 110px;
@@ -192,19 +188,160 @@ body {
   padding: 10px 0px;
   font-family: "Bricolage Grotesque", sans-serif;
 }
-.forcast-info-card-img{
+.forcast-info-card-img {
   height: 30px;
   width: 30px;
 }
-.forcast-info-card-value{
+.forcast-info-card-value {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
 }
 
-.daily-forcast-info-card{
+.daily-forcast-info-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.left-dashboard {
+  background-color: var(--neutral-600-background-3);
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.hourly-forecast-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.forecast-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+/* Main Select Wrapper */
+.custom-select {
+  position: relative;
+  width: 140px;
+  user-select: none;
+}
+
+/* Trigger Button Styling */
+.select-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--neutral-300-background-4);
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.select-trigger:hover,
+.custom-select.open .select-trigger {
+  background-color: var(--neutral-600-background-3);
+}
+
+.select-icon {
+  color: var(--text-muted);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Active State Arrow Rotation */
+.custom-select.open .select-icon {
+  transform: rotate(180deg);
+}
+
+/* Custom Dropdown Options Menu */
+.select-options {
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  right: 0;
+  z-index: 100;
+
+  margin: 0;
+  padding: 6px;
+  list-style: none;
+
+  background-color: var(--menu-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 14px;
+  box-shadow:
+    0 10px 25px -5px rgba(0, 0, 0, 0.5),
+    0 8px 10px -6px rgba(0, 0, 0, 0.3);
+
+  /* Animated State Transitions */
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-8px) scale(0.97);
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease,
+    visibility 0.2s;
+}
+
+/* Open Animation State */
+.custom-select.open .select-options {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0) scale(1);
+}
+
+/* Individual Option Item Styling */
+.option {
+  padding: 10px 12px;
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.15s ease,
+    color 0.15s ease;
+}
+
+.option:hover {
+  background-color: var(--neutral-300-background-4);
+}
+
+/* Currently Selected Option */
+.option.selected {
+  background-color: var(--neutral-300-background-4);
+}
+.forecast-liveValue {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  font-family: "Bricolage Grotesque", sans-serif;
+}
+
+.forecast-values {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-radius: 8px;
+  background-color: #3b3b5c;
+}
+.forecast-values-frame img {
+  height: 50px;
+  width: 50px;
+}
+.forecast-values-frame {
+  display: flex;
+  align-items: center;
+  gap: 5px;
 }
