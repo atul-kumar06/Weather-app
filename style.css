@@ -1,24 +1,17 @@
 @import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
 /* font-family: "Bricolage Grotesque", sans-serif; */
-/* font-family: "DM Sans", sans-serif; */
 
 :root {
-  /* Neutral */
   --neutral-900-main-background: hsl(243, 96%, 9%);
   --neutral-800-background: hsl(243, 27%, 20%);
-  --neutral-700-background-2: hsl(243, 23%, 24%);
-  --neutral-600-background-3: #222238;
-  --neutral-300-background-4: hsl(240, 6%, 70%);
-  --neutral-200-text-colour: hsl(250, 6%, 84%);
-  --neutral-0-text-colour-2: hsl(0, 0%, 100%);
-
-  /* Orange */
+  --neutral-700-background: hsl(243, 23%, 24%);
+  --neutral-600-background: #222238;
+  --neutral-300-background: hsl(240, 6%, 70%);
+  --neutral-200-background: hsl(250, 6%, 84%);
+  --neutral-0-background: hsl(0, 0%, 100%);
   --orange-500: hsl(28, 100%, 52%);
-
-  /* Blue */
   --blue-500: hsl(233, 67%, 56%);
   --blue-700: hsl(248, 70%, 36%);
-
   --border-radius-lg: 24px;
   --border-radius-sm: 16px;
 }
@@ -27,20 +20,26 @@
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  color: var(--neutral-0-text-colour-2);
+  color: var(--neutral-0-background);
 }
 
 body {
   background-color: var(--neutral-900-main-background);
-  padding: 30px 50px;
-  height: 100svh;
-  color: var(--neutral-0-text-colour-2);
+  padding: 20px 24px;
+  min-height: 100vh;
+  color: var(--neutral-0-background);
+  font-family: "DM Sans", sans-serif;
 }
 
-.navBar {
+.navbar {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
 }
 
 .switch-btn {
@@ -48,13 +47,79 @@ body {
   border: none;
   outline: none;
   cursor: pointer;
-  background-color: var(--neutral-600-background-3);
+  background-color: var(--neutral-600-background);
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
-  gap: 10px;
+  border-radius: 8px;
+  gap: 5px;
   padding: 10px;
+  transition: transform 0.1s ease;
+  position: relative;
+}
+
+.switch-btn:hover {
+  background-color: var(--neutral-700-background);
+}
+
+.switch-btn:active {
+  transform: scale(0.95);
+}
+
+.unit-value {
+  position: absolute;
+  width: 200px;
+  background-color: var(--neutral-600-background);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 8px;
+  right: 30px;
+  top: 65px;
+}
+
+.value-selected ul li {
+  list-style: none;
+}
+.value-selected {
+  margin: 10px 0px;
+}
+.value-selected p {
+  margin-bottom: 10px;
+}
+.value-selected ul {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.unit-value-selected {
+  padding: 10px;
+  background: var(--neutral-700-background);
+  border-radius: 8px;
+}
+.unit-value-selected img {
+  margin-left: 10px;
+  display: none;
+}
+
+.selected-border {
+  width: 100%;
+  height: 2px;
+  background: var(--neutral-700-background);
+}
+
+.convertor-btn {
+  background-color: var(--neutral-700-background);
+  border: none;
+  outline: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+  font-size: medium;
+  transition: transform 0.1s ease;
+}
+.convertor-btn:active {
+  transform: scale(0.95);
 }
 
 .heading-line {
@@ -277,7 +342,7 @@ body {
   padding: 6px;
   list-style: none;
 
-  background-color: var(--menu-bg);
+  background-color: var(--neutral-600-background-3);
   border: 1px solid var(--border-color);
   border-radius: 14px;
   box-shadow:
@@ -326,6 +391,7 @@ body {
   flex-direction: column;
   row-gap: 10px;
   font-family: "Bricolage Grotesque", sans-serif;
+  overflow: scroll;
 }
 
 .forecast-values {
@@ -344,4 +410,11 @@ body {
   display: flex;
   align-items: center;
   gap: 5px;
+}
+
+/* Responsiveness  */
+@media screen and (max-width: 700px) {
+  body {
+    padding: 10px 14px;
+  }
 }

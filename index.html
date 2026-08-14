@@ -12,17 +12,49 @@
 </head>
 
 <body>
+  <header class="navbar">
+    <img src="./assets/images/logo.svg" alt="Weather App Logo" class="logo" />
+    <div class="unit-container">
+      <button class="switch-btn">
+        <img src="./assets/images/icon-units.svg" alt="setting-icon" />
+        <span>Units</span>
+        <img src="./assets/images/icon-dropdown.svg" alt="dropdown-icon" class="unit-dropdown-icon" />
+      </button>
+      <div class="unit-value">
+        <button class="convertor-btn">Switch to Imperial</button>
 
-  <header class="navBar">
-    <img src="./assets/images/logo.svg" alt="logo" />
-    <button class="switch-btn">
-      <img src="./assets/images/icon-units.svg" alt="" />
-      <span>Units</span>
-      <img src="./assets/images/icon-dropdown.svg" alt="" />
-    </button>
+        <div class="value-selected">
+          <p>Temperature</p>
+          <ul>
+            <li class="unit-value-selected">
+              Celsius <span>(&deg;C)</span><img src="./assets/images/icon-checkmark.svg" alt="" />
+            </li>
+            <li>Fahrenheit <span>(&deg;</span><span>F)</span></li>
+            <li class="selected-border"></li>
+          </ul>
+        </div>
+
+        <div class="value-selected">
+          <p>Wind Speed</p>
+          <ul>
+            <li>Km/h</li>
+            <li>mph</li>
+            <li class="selected-border"></li>
+          </ul>
+        </div>
+
+        <div class="value-selected">
+          <p>Precipitation</p>
+          <ul>
+            <li>Milimeters <span>(mm)</span></li>
+            <li>Inches(in)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
   </header>
 
-  <h1 class="heading-line">How's the sky looking today?</h1>
+  <!-- <h1 class="heading-line">How's the sky looking today?</h1>
 
   <section class="search-container">
     <div class="search-bar">
@@ -188,7 +220,6 @@
       <div class="hourly-forecast-header">
         <h3 class="forecast-title">Hourly forecast</h3>
 
-        <!-- Custom Select Dropdown -->
         <div class="custom-select" id="daySelect">
           <button class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
             <span class="selected-value">Tuesday</span>
@@ -198,7 +229,7 @@
             </svg>
           </button>
 
-          <!-- Custom Floating Options Menu -->
+
           <ul class="select-options" role="listbox" aria-label="Select day">
             <li class="option" data-value="Monday" role="option">Monday</li>
             <li class="option selected" data-value="Tuesday" role="option" aria-selected="true">Tuesday</li>
@@ -212,6 +243,7 @@
       </div>
 
       <div class="forecast-liveValue">
+
         <div class="forecast-values">
           <div class="forecast-values-frame">
             <img src="./assets/images/icon-rain.webp" alt="">
@@ -271,7 +303,7 @@
     </div>
 
     </div>
-  </section>
+  </section> -->
 
   <script src="app.js" type="module"></script>
 </body>
