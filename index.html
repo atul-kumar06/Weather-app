@@ -4,9 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- displays site properly based on user's device -->
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png" />
-
   <title>Frontend Mentor | Weather app</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -14,40 +12,77 @@
 <body>
   <header class="navbar">
     <img src="./assets/images/logo.svg" alt="Weather App Logo" class="logo" />
-    <div class="unit-container">
-      <button class="switch-btn">
-        <img src="./assets/images/icon-units.svg" alt="setting-icon" />
+
+    <!-- Unit Selector Component -->
+    <div class="unit-menu">
+      <button type="button" class="unit-menu__trigger" aria-haspopup="true" aria-expanded="false"
+        aria-controls="unit-dropdown">
+        <img src="./assets/images/icon-units.svg" alt="" aria-hidden="true" />
         <span>Units</span>
-        <img src="./assets/images/icon-dropdown.svg" alt="dropdown-icon" class="unit-dropdown-icon" />
+        <img src="./assets/images/icon-dropdown.svg" alt="" aria-hidden="true" class="unit-menu__arrow" />
       </button>
-      <div class="unit-value">
-        <button class="convertor-btn">Switch to Imperial</button>
 
-        <div class="value-selected">
-          <p>Temperature</p>
-          <ul>
-            <li class="unit-value-selected">
-              Celsius <span>(&deg;C)</span><img src="./assets/images/icon-checkmark.svg" alt="" />
+      <!-- Dropdown Menu -->
+      <div id="unit-dropdown" class="unit-dropdown" role="region" aria-label="Unit preferences">
+        <button type="button" class="unit-dropdown__system-btn">
+          Switch to Imperial
+        </button>
+
+        <!-- Temperature -->
+        <div class="unit-group" data-unit-category="temperature">
+          <span class="unit-group__title">Temperature</span>
+          <ul class="unit-group__list">
+            <li>
+              <button type="button" class="unit-option unit-option--selected" data-unit="metric"
+                data-unit-value="celsius">
+                <span>Celsius (&deg;C)</span>
+                <img src="./assets/images/icon-checkmark.svg" alt="Selected" class="unit-option__check" />
+              </button>
             </li>
-            <li>Fahrenheit <span>(&deg;</span><span>F)</span></li>
-            <li class="selected-border"></li>
+            <li>
+              <button type="button" class="unit-option" data-unit="imperial" data-unit-value="fahrenheit">
+                <span>Fahrenheit (&deg;F)</span>
+                <img src="./assets/images/icon-checkmark.svg" alt="Selected" class="unit-option__check" />
+              </button>
+            </li>
           </ul>
         </div>
 
-        <div class="value-selected">
-          <p>Wind Speed</p>
-          <ul>
-            <li>Km/h</li>
-            <li>mph</li>
-            <li class="selected-border"></li>
+        <!-- Wind Speed -->
+        <div class="unit-group" data-unit-category="windSpeed">
+          <span class="unit-group__title">Wind Speed</span>
+          <ul class="unit-group__list">
+            <li>
+              <button type="button" class="unit-option unit-option--selected" data-unit="metric" data-unit-value="kmh">
+                <span>km/h</span>
+                <img src="./assets/images/icon-checkmark.svg" alt="Selected" class="unit-option__check" />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="unit-option" data-unit="imperial" data-unit-value="mph">
+                <span>mph</span>
+                <img src="./assets/images/icon-checkmark.svg" alt="Selected" class="unit-option__check" />
+              </button>
+            </li>
           </ul>
         </div>
 
-        <div class="value-selected">
-          <p>Precipitation</p>
-          <ul>
-            <li>Milimeters <span>(mm)</span></li>
-            <li>Inches(in)</li>
+        <!-- Precipitation -->
+        <div class="unit-group" data-unit-category="precipitation">
+          <span class="unit-group__title">Precipitation</span>
+          <ul class="unit-group__list">
+            <li>
+              <button type="button" class="unit-option unit-option--selected" data-unit="metric" data-unit-value="mm">
+                <span>Millimeters (mm)</span>
+                <img src="./assets/images/icon-checkmark.svg" alt="Selected" class="unit-option__check" />
+              </button>
+            </li>
+            <li>
+              <button type="button" class="unit-option" data-unit="imperial" data-unit-value="in">
+                <span>Inches (in)</span>
+                <img src="./assets/images/icon-checkmark.svg" alt="Selected" class="unit-option__check" />
+              </button>
+            </li>
           </ul>
         </div>
       </div>
