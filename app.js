@@ -41,6 +41,7 @@
 //     trigger.setAttribute("aria-expanded", "false");
 //   });
 // });
+
 const unitMenu = document.querySelector(".unit-menu");
 const triggerbtn = document.querySelector(".unit-menu__trigger");
 const dropdown = document.querySelector(".unit-dropdown");
@@ -85,19 +86,56 @@ document.addEventListener("keydown", (e) => {
   }
 });
 
-// 2. Individual Unit Option Selection
+// // 2. Individual Unit Option Selection
+// unitgroups.forEach((group) => {
+//   const category = group.dataset.unitCategory;
+//   const options = group.querySelectorAll(".unit-option");
+//   console.log(options);
 
-unitgroups.forEach((group) => {
-  const category = group.dataset.unitCategory;
-  const options = group.querySelectorAll(".unit-option");
-  options.forEach((btn) => {
-    btn.addEventListener("click", () => {
-      options.forEach((opt) => {
-        opt.classList.remove("unit-option--selected");
-        btn.classList.add("unit-option--selected");
+//   options.forEach((btn) => {
+//     btn.addEventListener("click", () => {
+//       // Clear active state in group and set on clicked button
+//       options.forEach((opt) => {
+//         opt.classList.remove("unit-option--selected");
+//         btn.classList.add("unit-option--selected");
+
+//         currentUnits[category] = btn.dataset.unitValue;
+//         checkSystemPresetMatch();
+//       });
+//     });
+//   });
+// });
+
+// function checkSystemPresetMatch() {
+//   const isAllImperial =
+//     currentUnits.temperature === "fahrenheit" &&
+//     currentUnits.windSpeed === "mph" &&
+//     currentUnits.precipitation === "in";
+//   systemToggleBtn.textContent = isAllImperial
+//     ? "Switch to Metric"
+//     : "Switch to Imperial";
+// }
+
+systemToggleBtn.addEventListener("click", () => {
+  const isImperialTarget =
+    systemToggleBtn.textContent.trim() === "Switch to Imperial";
+  const targetSystem = isImperialTarget ? "imperial" : "metric";
+
+  unitgroups.forEach((group) => {
+    const category = group.dataset.unitCategory;
+    const options = group.querySelectorAll(".unit-option");
+
+    options.forEach((btn) => {
+      const isMatch = btn.dataset.unit === targetSystem;
+      btn.classList.toggle("unit-option--selected", isMatch);
+
+      if (isMatch) {
         currentUnits[category] = btn.dataset.unitValue;
-        checkSystemPresetMatch();
-      });
+      }
     });
   });
+
+  systemToggleBtn.textContent = isImperialTarget
+    ? "Switch to Metric"
+    : "Switch to Imperial";
 });

@@ -88,257 +88,176 @@
       </div>
     </div>
   </header>
-
-  <!-- <h1 class="heading-line">How's the sky looking today?</h1>
-
-  <section class="search-container">
-    <div class="search-bar">
-      <img src="./assets/images/icon-search.svg" alt="">
-      <input type="text" placeholder="Search for a place....">
+  <main>
+    <!-- Main heading of page -->
+    <h1 class="heading-line">How's the sky looking today?</h1>
+    <!-- Search bar of page -->
+    <div class="search-container">
+      <div class="search-box">
+        <img src="./assets/images/icon-search.svg" alt="search-icon" class="search-icon">
+        <input type="text" placeholder="Search for places . . . . . " class="search-bar" id="search-bar">
+      </div>
+      <button class="search-btn" type="button">Search</button>
     </div>
-    <button>Search</button>
-  </section>
-
+  </main>
+  <!-- Weather Dashboard -->
   <section class="weather-dashboard">
-
-    <div class="right-dashboard">
-
-      <div class="weather-info">
-        <div class="country-location">
-          <p class="country-name">Berlin,Germany</p>
-          <p>Tuesday,Aug,2025</p>
-        </div>
-        <div class="country-temp">
-          <img src="./assets/images/icon-rain.webp" alt="">
-          <div class="country-temp-value">
-            <span>20</span><span>&deg;</span>
-          </div>
-        </div>
-      </div>
-
-      <div class="weather-card-container">
-        <div class="weather-card">
-          <p class="weather-details">Feels Like</p>
-          <div class="weather-temp">
-            <span class="weather-value">18</span><span>&deg;</span>
-          </div>
-        </div>
-        <div class="weather-card">
-          <p class="weather-details">Humadity</p>
-          <div class="weather-temp">
-            <span class="weather-value">46</span><span>%</span>
-          </div>
-        </div>
-        <div class="weather-card">
-          <p class="weather-details">Wind</p>
-          <div class="weather-temp">
-            <span class="weather-value">14</span>
-            <span>Km/h</span>
-          </div>
-        </div>
-        <div class="weather-card">
-          <p class="weather-details">Perception</p>
-          <div class="weather-temp">
-            <span class="weather-value">0</span>
-            <span>mm</span>
-          </div>
-        </div>
-      </div>
-      <h3 class="forcast-heading">Daily Forecast</h3>
-      <div class="daily-forcast-info-card">
-
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-        <div class="forcast-info-card">
-          <p>Tue</p>
-          <img src="./assets/images/icon-rain.webp" alt="" class="forcast-info-card-img">
-          <div class="forcast-info-card-value">
-            <div>
-              <span>20</span>
-              <span>&deg;</span>
-            </div>
-            <div>
-              <span>12</span>
-              <span>&deg;</span>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-
-
     <div class="left-dashboard">
-
-      <div class="hourly-forecast-header">
-        <h3 class="forecast-title">Hourly forecast</h3>
-
-        <div class="custom-select" id="daySelect">
-          <button class="select-trigger" aria-haspopup="listbox" aria-expanded="false">
-            <span class="selected-value">Tuesday</span>
-            <svg class="select-icon" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24"
-              fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-              <polyline points="6 9 12 15 18 9"></polyline>
-            </svg>
-          </button>
-
-
-          <ul class="select-options" role="listbox" aria-label="Select day">
-            <li class="option" data-value="Monday" role="option">Monday</li>
-            <li class="option selected" data-value="Tuesday" role="option" aria-selected="true">Tuesday</li>
-            <li class="option" data-value="Wednesday" role="option">Wednesday</li>
-            <li class="option" data-value="Thursday" role="option">Thursday</li>
-            <li class="option" data-value="Friday" role="option">Friday</li>
-            <li class="option" data-value="Saturday" role="option">Saturday</li>
-            <li class="option" data-value="Sunday" role="option">Sunday</li>
-          </ul>
+      <!-- Hero Weather Card -->
+      <div class="hero-background">
+        <img src="./assets/images/bg-today-large.svg" alt="Desktop-view" class="hero-img">
+        <div class="hero-card">
+          <div class="hero-info">
+            <h2>Berlin,Germany</h2>
+            <p>Tuesday, Aug 5 , 2025</p>
+          </div>
+          <div class="hero-temp">
+            <span class="weather-icon">☀️</span>
+            <span class="temp">20°</span>
+          </div>
         </div>
       </div>
-
-      <div class="forecast-liveValue">
-
-        <div class="forecast-values">
-          <div class="forecast-values-frame">
-            <img src="./assets/images/icon-rain.webp" alt="">
-            <span>3</span>
-            <span>PM</span>
-          </div>
-          <div>
-            <span>20</span>
-            <span>&deg;</span>
-          </div>
+      <!-- 4 Metric Cards -->
+      <div class="metric-grid">
+        <div class="metric-card">
+          <span class="metric-label">Feels Like</span>
+          <span class="metric-value" id="metric-feels">18°</span>
         </div>
-        <div class="forecast-values">
-          <div class="forecast-values-frame">
-            <img src="./assets/images/icon-rain.webp" alt="">
-            <span>3</span>
-            <span>PM</span>
-          </div>
-          <div>
-            <span>20</span>
-            <span>&deg;</span>
-          </div>
+        <div class="metric-card">
+          <span class="metric-label">Humadity</span>
+          <span class="metric-value" id="metric-feels">46%</span>
         </div>
-        <div class="forecast-values">
-          <div class="forecast-values-frame">
-            <img src="./assets/images/icon-rain.webp" alt="">
-            <span>3</span>
-            <span>PM</span>
-          </div>
-          <div>
-            <span>20</span>
-            <span>&deg;</span>
-          </div>
+        <div class="metric-card">
+          <span class="metric-label">Wind</span>
+          <span class="metric-value" id="metric-feels">14 km/h</span>
         </div>
-        <div class="forecast-values">
-          <div class="forecast-values-frame">
-            <img src="./assets/images/icon-rain.webp" alt="">
-            <span>3</span>
-            <span>PM</span>
-          </div>
-          <div>
-            <span>20</span>
-            <span>&deg;</span>
-          </div>
+        <div class="metric-card">
+          <span class="metric-label">Precipitation</span>
+          <span class="metric-value" id="metric-feels">0 mm</span>
         </div>
-        <div class="forecast-values">
-          <div class="forecast-values-frame">
-            <img src="./assets/images/icon-rain.webp" alt="">
-            <span>3</span>
-            <span>PM</span>
+      </div>
+      <div class="daily-forecast">
+        <h3 class="section-title">Daily forecast</h3>
+        <div class="daily-grid" id="daily-container">
+          <!-- Day Item (Repeated for 7 days) -->
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
           </div>
-          <div>
-            <span>20</span>
-            <span>&deg;</span>
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
+          </div>
+          <div class="day-card">
+            <span class="day-name">Tue</span>
+            <img alt="Rain" class="day-icon" src="./assets/images/icon-fog.webp" />
+            <div class="day-range">
+              <span class="high">20°</span>
+              <span class="low">14°</span>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
+    <div class="right-dashboard">
+      <div class="hourly-header">
+        <h3 class="section-title">Hourley forecast</h3>
+        <select name="hourley-select" id="hourley-day-select">
+          <option value="tuesday">Tuesday</option>
+          <option value="wednesday">Wednesday</option>
+          <option value="thursday">Thursday</option>
+          <option value="friday">Friday</option>
+          <option value="saturday">Saturday</option>
+          <option value="sunday">Sunday</option>
+          <option value="monday">Monday</option>
+        </select>
+      </div>
+      <div class="hourly-list" id="hourly-container">
+        <div class="hourly-item">
+          <div class="hourly-time">
+            <img src="./assets/images/icon-rain.webp" alt="rain" class="hourly-icon">
+            <span>3 PM</span>
+          </div>
+          <span class="hourly-temp">20°</span>
+        </div>
+        <div class="hourly-item">
+          <div class="hourly-time">
+            <img src="./assets/images/icon-rain.webp" alt="rain" class="hourly-icon">
+            <span>3 PM</span>
+          </div>
+          <span class="hourly-temp">20°</span>
+        </div>
+        <div class="hourly-item">
+          <div class="hourly-time">
+            <img src="./assets/images/icon-rain.webp" alt="rain" class="hourly-icon">
+            <span>3 PM</span>
+          </div>
+          <span class="hourly-temp">20°</span>
+        </div>
+        <div class="hourly-item">
+          <div class="hourly-time">
+            <img src="./assets/images/icon-rain.webp" alt="rain" class="hourly-icon">
+            <span>3 PM</span>
+          </div>
+          <span class="hourly-temp">20°</span>
+        </div>
+        <div class="hourly-item">
+          <div class="hourly-time">
+            <img src="./assets/images/icon-rain.webp" alt="rain" class="hourly-icon">
+            <span>3 PM</span>
+          </div>
+          <span class="hourly-temp">20°</span>
+        </div>
+        <div class="hourly-item">
+          <div class="hourly-time">
+            <img src="./assets/images/icon-rain.webp" alt="rain" class="hourly-icon">
+            <span>3 PM</span>
+          </div>
+          <span class="hourly-temp">20°</span>
+        </div>
+      </div>
     </div>
-  </section> -->
+  </section>
 
   <script src="app.js" type="module"></script>
 </body>
