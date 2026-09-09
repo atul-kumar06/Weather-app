@@ -88,6 +88,7 @@
       </div>
     </div>
   </header>
+
   <main>
     <!-- Main heading of page -->
     <h1 class="heading-line">How's the sky looking today?</h1>
@@ -100,22 +101,23 @@
       <button class="search-btn" type="button">Search</button>
     </div>
   </main>
+
   <!-- Weather Dashboard -->
   <section class="weather-dashboard">
     <div class="left-dashboard">
       <!-- Hero Weather Card -->
       <div class="hero-background">
-        <img src="./assets/images/bg-today-large.svg" alt="Desktop-view" class="hero-img">
+        <!-- <img src="./assets/images/bg-today-large.svg" alt="Desktop-view" class="hero-img"> -->
         <div class="hero-card">
           <div class="hero-info">
             <h2>
               <span class="country_state">Berlin</span>,
               <span class="country_name">Germany</span>
             </h2>
-            <p>Tuesday, Aug 5 , 2025</p>
+            <p class="country_current_time">Tuesday, Aug 5 , 2025</p>
           </div>
           <div class="hero-temp">
-            <span class="weather-icon">☀️</span>
+             <img src="" alt="" class="weather-icon">
             <span class="temp">20°</span>
           </div>
         </div>
@@ -124,19 +126,26 @@
       <div class="metric-grid">
         <div class="metric-card">
           <span class="metric-label">Feels Like</span>
-          <span class="metric-value" id="metric-feels">18°</span>
+          <span id="metric-feels">
+            <span class="Feels_like-value">18</span>
+            <span>°</span>
+          </span>
         </div>
         <div class="metric-card">
           <span class="metric-label">Humadity</span>
-          <span class="metric-value" id="metric-feels">46%</span>
+          <span id="metric-feels">
+            <span class="humadity-value">46</span><span>%</span></span>
         </div>
         <div class="metric-card">
           <span class="metric-label">Wind</span>
-          <span class="metric-value" id="metric-feels">14 km/h</span>
+          <span  id="metric-feels">
+            <span class="wind-value">14</span>
+            <span> km/h</span></span>
         </div>
         <div class="metric-card">
           <span class="metric-label">Precipitation</span>
-          <span class="metric-value" id="metric-feels">0 mm</span>
+          <span id="metric-feels">
+            <span class="precipitation-value">0</span> <span>mm</span></span>
         </div>
       </div>
       <div class="daily-forecast">
